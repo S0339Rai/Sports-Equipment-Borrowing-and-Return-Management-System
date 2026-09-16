@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จองอุปกรณ์ - ระบบยืม-คืนอุปกรณ์กีฬา</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <img src="images/LOGO-SSP.png" alt="logo" class="logo-img">
+
+            <div class="brand-text">
+                <p class="th">การยืม-คืนอุปกรณ์กีฬาของกลุ่มสาระการเรียนรู้สุขศึกษาและพลศึกษา</p>
+                <p class="en">Sports Equipment Borrowing and Return Management System</p>
+            </div>
+        </div>
+
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">หน้าหลัก</a>
+        <a href="equipment.html">รายการอุปกรณ์ทั้งหมด</a>
+        <a href="booking.html" class="active">จองอุปกรณ์</a>
+        <a href="history.html">ประวัติการยืม-คืน</a>
+    </nav>
+
+    <main>
+        <div class="booking-layout">
+
+            <section class="booking-form-panel">
+                <h2 class="panel-title">จองอุปกรณ์</h2>
+
+                <form id="bookingForm">
+                    <div class="register-row form-group">
+                        <div>
+                            <label for="bk-firstname">ชื่อ</label>
+                            <input type="text" id="bk-firstname" required>
+                        </div>
+                        <div>
+                            <label for="bk-lastname">นามสกุล</label>
+                            <input type="text" id="bk-lastname" required>
+                        </div>
+                    </div>
+
+                    <div class="register-row form-group">
+                        <div>
+                            <label for="bk-studentid">รหัสประจำตัวนักเรียน</label>
+                            <input type="text" id="bk-studentid" required>
+                        </div>
+                        <div>
+                            <label for="bk-class">ชั้นเรียน</label>
+                            <input type="text" id="bk-class" placeholder="เช่น ม.5/3" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bk-equipment">เลือกอุปกรณ์</label>
+                        <select id="bk-equipment" required>
+              <option value="">เลือกอุปกรณ์</option>
+            </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bk-date">วันที่ต้องการจอง (พ.ศ.)</label>
+                        <input type="text" id="bk-date" placeholder="วว/ดด/ปปปป เช่น 05/03/2569" required>
+                        <p class="field-hint">พิมพ์รูปแบบ วัน/เดือน/ปี พ.ศ. เช่น 05/03/2569</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bk-time">เวลาที่ต้องการยืม</label>
+                        <select id="bk-time" required>
+              <option value="">เลือกเวลา</option>
+              <option value="08:00">08:00 น.</option>
+              <option value="08:30">08:30 น.</option>
+              <option value="09:00">09:00 น.</option>
+              <option value="09:30">09:30 น.</option>
+              <option value="10:00">10:00 น.</option>
+              <option value="10:30">10:30 น.</option>
+              <option value="11:00">11:00 น.</option>
+              <option value="11:30">11:30 น.</option>
+              <option value="12:00">12:00 น.</option>
+              <option value="12:30">12:30 น.</option>
+              <option value="13:00">13:00 น.</option>
+              <option value="13:30">13:30 น.</option>
+              <option value="14:00">14:00 น.</option>
+              <option value="14:30">14:30 น.</option>
+              <option value="15:00">15:00 น.</option>
+              <option value="15:30">15:30 น.</option>
+              <option value="16:00">16:00 น.</option>
+              <option value="16:30">16:30 น.</option>
+              <option value="17:00">17:00 น.</option>
+            </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bk-purpose">วัตถุประสงค์</label>
+                        <input type="text" id="bk-purpose" placeholder="ระบุวัตถุประสงค์การใช้งาน" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bk-note">หมายเหตุ</label>
+                        <input type="text" id="bk-note" placeholder="ระบุหมายเหตุ (ถ้ามี)">
+                    </div>
+
+                    <div class="booking-form-actions">
+                        <button type="submit" class="btn-save">ส่งคำขอจอง</button>
+                        <button type="button" id="bk-clear" class="btn-cancel">ล้างข้อมูล</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="booking-list-panel">
+                <h2 class="panel-title">รายการจองล่าสุด</h2>
+                <div id="bookingSuccessMsg" class="save-msg">บันทึกรายการจองลงระบบสำเร็จ</div>
+                <div id="bookingList" class="booking-list"></div>
+                <a href="history.html" class="booking-view-all">ดูรายการทั้งหมด</a>
+            </section>
+
+        </div>
+    </main>
+    <script src="sheetdb-api.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

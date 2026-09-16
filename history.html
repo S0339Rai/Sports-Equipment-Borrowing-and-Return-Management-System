@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติการยืม-คืน - ระบบยืม-คืนอุปกรณ์กีฬา</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <img src="images/LOGO-SSP.png" alt="logo" class="logo-img">
+
+            <div class="brand-text">
+                <p class="th">การยืม-คืนอุปกรณ์กีฬาของกลุ่มสาระการเรียนรู้สุขศึกษาและพลศึกษา</p>
+                <p class="en">Sports Equipment Borrowing and Return Management System</p>
+            </div>
+        </div>
+
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">หน้าหลัก</a>
+        <a href="equipment.html">รายการอุปกรณ์ทั้งหมด</a>
+        <a href="booking.html">จองอุปกรณ์</a>
+        <a href="history.html" class="active">ประวัติการยืม-คืน</a>
+    </nav>
+
+    <main>
+        <section class="history-panel">
+            <div class="panel-header-row">
+                <h2 class="history-panel-title">ประวัติการยืม-คืนอุปกรณ์</h2>
+            </div>
+
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>ลำดับ</th>
+                        <th>อุปกรณ์</th>
+                        <th>ผู้จอง</th>
+                        <th>วันยืม</th>
+                        <th>กำหนดคืน</th>
+                        <th>วันคืน</th>
+                        <th>สถานะ</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="historyTableBody"></tbody>
+            </table>
+
+            <div id="historyPagination" class="pagination"></div>
+        </section>
+    </main>
+    <script src="sheetdb-api.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

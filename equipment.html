@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายการอุปกรณ์ทั้งหมด - ระบบยืม-คืนอุปกรณ์กีฬา</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <img src="images/LOGO-SSP.png" alt="logo" class="logo-img">
+
+            <div class="brand-text">
+                <p class="th">การยืม-คืนอุปกรณ์กีฬาของกลุ่มสาระการเรียนรู้สุขศึกษาและพลศึกษา</p>
+                <p class="en">Sports Equipment Borrowing and Return Management System</p>
+            </div>
+        </div>
+
+    </header>
+
+    <nav class="navbar">
+        <a href="index.html">หน้าหลัก</a>
+        <a href="equipment.html" class="active">รายการอุปกรณ์ทั้งหมด</a>
+        <a href="booking.html">จองอุปกรณ์</a>
+        <a href="history.html">ประวัติการยืม-คืน</a>
+    </nav>
+
+    <main>
+        <div class="equip-panel">
+
+            <div class="equip-topline">
+                <h2 class="equip-title">รายการอุปกรณ์ทั้งหมด</h2>
+                <div class="equip-search">
+                    <input type="text" placeholder="ค้นหาอุปกรณ์...">
+                    <select>
+            <option>ทั้งหมด</option>
+            <option>ลูกบอล</option>
+          </select>
+                    <button class="btn-search">ค้นหา</button>
+                </div>
+            </div>
+
+            <div class="category-tabs">
+                <button class="tab active">ทั้งหมด</button>
+                <button class="tab">ลูกบอล</button>
+            </div>
+
+            <div class="equip-grid" id="equipmentGrid"></div>
+        </div>
+    </main>
+    <script src="sheetdb-api.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
